@@ -24,8 +24,7 @@ public class BoardController {
     public String list(ModelMap model) throws Exception{
 
 
-    	List<Board> list = boardService.list();
-    	
+    	List<Board> list = boardService.list();    	
 
 
     	model.addAttribute("list", 	list);
