@@ -21,8 +21,7 @@ public class BoardServiceImpl implements BoardService{
 	
 	@Override
 	public List<Board> list() throws Exception {
-		return boardDAO.list();
-		
+		return boardDAO.list();		
 	}
 
 }
