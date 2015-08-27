@@ -18,4 +18,9 @@ public class BoardDAO {
 		return sqlSession.selectList("boardResult.list");
 	}
 
+
+	public void insertSchedule()  throws Exception{
+		sqlSession.insert("boardResult.insertSchedule");
+	}
+
 }

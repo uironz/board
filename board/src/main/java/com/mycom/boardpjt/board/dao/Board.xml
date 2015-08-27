@@ -13,4 +13,16 @@
 		]]>
 	</select>
 	
+		<insert id="insertSchedule"   >
+		<![CDATA[
+			insert into board(usrId,subject,content,regdate) 
+			values('aaa','aa','sss','2015-01-01')
+		]]>
+		</insert>
+	
+	
+	
+
+
+
 </mapper>

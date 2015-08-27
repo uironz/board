@@ -9,4 +9,6 @@ public interface BoardService {
 
 	List<Board> list() throws Exception;
 
+	void insertSchedule() throws Exception;
+
 }

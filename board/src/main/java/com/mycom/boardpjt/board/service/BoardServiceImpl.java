@@ -24,4 +24,9 @@ public class BoardServiceImpl implements BoardService{
 		return boardDAO.list();		
 	}
 
+	@Override
+	public void insertSchedule() throws Exception {
+		boardDAO.insertSchedule();	
+	}
+
 }
