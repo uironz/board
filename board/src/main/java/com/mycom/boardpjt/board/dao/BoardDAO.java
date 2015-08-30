@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 @Repository("BoardDAO")
@@ -21,6 +22,11 @@ public class BoardDAO {
 
 	public void insertSchedule()  throws Exception{
 		sqlSession.insert("boardResult.insertSchedule");
+	}
+
+
+	public void insert() {
+		sqlSession.insert("boardResult.insert");
 	}
 
 }

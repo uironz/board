@@ -9,7 +9,7 @@
         </layout>   
     </appender>
     
-    <appender name="console-infolog" class="org.apache.log4j.ConsoleAppender">
+    <appender name="console-debuglog" class="org.apache.log4j.ConsoleAppender">
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d %5p %m%n" />
         </layout>   
@@ -17,25 +17,25 @@
 	
 	<!-- Application Loggers -->
 	<logger name="first" additivity="false">
-		<level value="info" />
+		<level value="debug" />
 		<appender-ref ref="console"/>
 	</logger>
 	
 	<!-- Query Loggers -->
 	<logger name="jdbc.sqlonly" additivity="false">  
-    	<level value="info"/>  
-        <appender-ref ref="console-infolog"/>  
+    	<level value="fatal"/>  
+        <appender-ref ref="console-debuglog"/>  
     </logger>
     
     <logger name="jdbc.resultsettable" additivity="false">  
-    	<level value="info"/>  
+    	<level value="fatal"/>  
         <appender-ref ref="console"/>  
     </logger>  
 
 	<!-- Root Logger -->
 	<root>
-		 <level value="info" />
-		<priority value="on"/>
+		<priority value="off"/>
+		<level value="debug"/> 
 		<appender-ref ref="console" />
 	</root>
 	

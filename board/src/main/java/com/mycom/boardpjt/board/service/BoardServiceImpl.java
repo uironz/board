@@ -29,4 +29,9 @@ public class BoardServiceImpl implements BoardService{
 		boardDAO.insertSchedule();	
 	}
 
+	@Override
+	public void insert() {
+		boardDAO.insert();
+	}
+
 }

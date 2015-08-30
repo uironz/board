@@ -11,4 +11,6 @@ public interface BoardService {
 
 	void insertSchedule() throws Exception;
 
+	void insert();
+
 }

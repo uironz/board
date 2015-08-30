@@ -13,12 +13,20 @@
 		]]>
 	</select>
 	
-		<insert id="insertSchedule"   >
-		<![CDATA[
-			insert into board(usrId,subject,content,regdate) 
-			values('aaa','aa','sss','2015-01-01')
-		]]>
-		</insert>
+	<insert id="insertSchedule"   >
+	<![CDATA[
+		insert into board(usrId,subject,content,regdate) 
+		values('aaa','insertSchedule','insertSchedule','2015-01-01')
+	]]>
+	</insert>
+	
+	<insert id="insert"   >
+	<![CDATA[
+		insert into board(usrId,subject,content,regdate) 
+		values('aaa','insert','sss','2015-01-01')
+	]]>
+	</insert>
+	
 	
 	
 	
