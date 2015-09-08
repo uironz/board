@@ -1,12 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
 <title>board</title>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 </head>
 <body>
+
+ <s:authorize ifAnyGranted="ROLE_USER">
+ 	is log In <br/>
+ </s:authorize>
+ 
+ <s:authorize ifNotGranted ="ROLE_USER">
+ 	is log Out<br/>
+ </s:authorize>
+ <br/>
+ usr ID  : <s:authentication property="name"/><br/>
+ <a href="/j_spring_security_logout">log out</a>
+ 
+ 
+ 
 <h2>게시판 목록</h2>
 ${fn:length(list)}////////
 <table style="border:1px solid #ccc">
