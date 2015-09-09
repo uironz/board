@@ -110,7 +110,12 @@ public class BoardController {
 	}
 	
 	
-	
+	@RequestMapping("/")
+    public String defaultpage(ModelMap model) throws Exception{
+
+    	
+    	return "login";
+    }
 
 	
 	@RequestMapping("/login")
