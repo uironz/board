@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+<security:http auto-config="true">
+	<security:intercept-url pattern="/list" access="ROLE_USER" />
+	<security:intercept-url pattern="/list" access="ROLE_ADMIN" />
+	<security:form-login login-page="/login"
+		authentication-failure-url="/login?ng" 
+		default-target-url="/list"
+		/>
+	<security:logout logout-success-url="/login" />
+</security:http>
+
+<!-- <security:authentication-manager> -->
+<!-- 	<security:authentication-provider> -->
+<!-- 		<security:user-service> -->
+<!-- 			<security:user name="user" password="1234" authorities="ROLE_USER"/> -->
+<!-- 			<security:user name="admin" password="1234" authorities="ROLE_ADMIN,ROLE_USER"/> -->
+<!-- 		</security:user-service> -->
+<!-- 	</security:authentication-provider> -->
+<!-- </security:authentication-manager> -->
+
+ 	<bean id="MemberDetailsService" class="com.mycom.boardpjt.account.service.MemberDetailsService" />
+ 	<security:authentication-manager >
+    	<security:authentication-provider user-service-ref="MemberDetailsService" />
+    </security:authentication-manager>
+    
+<!--      <bean id="accountService" class="com.mycom.boardpjt.account.service.MemberDetailsService"> -->
+<!--    		 <property name="accountDAO"> -->
+<!-- 			<bean  class="com.mycom.boardpjt.account.service.AccountServiceImpl"> -->
+<!-- 				<property name="sqlSessionFactory" ref="sqlSessionFactory" /> -->
+<!-- 			</bean> -->
+<!-- 		</property> -->
+<!--      </bean> -->
+      
+      
+
+
+</beans>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/decorators">
+	<excludes>
+		<pattern>/scripts/*</pattern>
+		<pattern>/images/*</pattern>
+		<pattern>/styles/*</pattern>
+		<pattern>/resources/*</pattern>
+		<pattern>/static/*</pattern>
+		<pattern>/remote/*</pattern>
+		<pattern>/rest/*</pattern>
+		<pattern>/web-resources/*</pattern>
+		<pattern>**/*Print</pattern>
+		<pattern>**/print*</pattern>
+		<pattern>**/*Popup*</pattern>
+		<pattern>**/*Excel*</pattern>
+		<pattern>**/*Ajax*</pattern>
+		<pattern>**/*.json</pattern>
+		<pattern>/_se/health.jsp</pattern>
+	</excludes>
+
+<decorator name="layout" page="/WEB-INF/layout/layout.jsp">
+<pattern>/*</pattern> 
+</decorator> 
+
+<decorator name="layout2" page="/WEB-INF/layout/layout2.jsp">
+<pattern>/web/*</pattern> 
+</decorator> 
+</decorators> 
